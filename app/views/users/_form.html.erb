@@ -1,0 +1,16 @@
+<%= simple_form_for(user) do |f| %>
+  <div class="field">
+    <%= f.input :email %>
+  </div>
+
+  <div class="field">
+    <%= f.simple_fields_for :data, user.data do |d| %>
+      <%= d.input :name %>
+      <%= d.input :address %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
