@@ -8,5 +8,7 @@ module Users
 
     attribute :name, String
     attribute :address, String
+
+    validates :name, presence: true
   end
 end
